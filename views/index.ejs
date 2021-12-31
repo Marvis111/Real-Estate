@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refrsh" content="3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Real Estate</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" href="/fonts/icomoon/style.css">
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+<body>
+    <%- include('./partials/unauthorisedNav') %>
+    <!--manin sectio...-->
+    <section class="hero-section">
+        <div class="jumbotron-intro">
+            <h1>You need a house?</h1>
+            <p>We have all it takes for you to have a good night rest under a conducive building
+            . All you need to do is to explore our pages.</p>
+            <div class="explore">
+                <a href="#">Explore</a>
+            </div>
+        </div>
+        <div class="houseDesc">
+            <h4 id='house-desc'><b>8 bedroom Bungalow</b></h4>
+            <div class="desc">
+                <ul>
+                    <li>Good swimming pool</li>
+                    <li>Conducive Environments</li>
+                    <li>4 x 4 inches chairs</li>
+                    <li>Soundproof roof</li>
+                    <li>Theft detectors</li>
+                </ul>
+            </div>
+            <div class="check-out">
+                    <a href="#">Checkout <i class="icon-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="categories">
+        <h2>Popular in Real Estates</h2>
+        <div class="p-houses">
+            <img src="/images/houses/istockphoto-1281554848-170667a.jpg" />
+            <span>5 Bedrooms Duplex for sale</span>
+            <span><b>$500,000</b></span>
+        </div>
+        <div class="p-houses">
+            <img src="/images/houses/photo-1513584684374-8bab748fbf90.jpeg" />
+            <span>8 Bedrooms King Palace</span>
+            <span><b>$400,000</b></span>
+        </div>
+        <div class="p-houses">
+            <img src="/images/houses/istockphoto-1293762741-170667a.jpg" />
+            <span>Beautiful houses for Sale</span>
+            <span><b>$2,300,000</b></span>
+        </div>
+        <div class="p-houses">
+            <img src="/images/houses/photo-1628745277874-919d8f8ed03a.jpeg" />
+            <span>4 Bedroom flat</span>
+            <span><b>$200,000</b></span>
+        </div>
+    </section>
+    <!--automobile-->
+    <section class="categories">
+        <h2>Popular in Automobiles</h2>
+        <div class="p-houses">
+            <img src="/images/automobiles/istockphoto-1272710044-170667a.jpg" />
+            <span>4WD Cardilac</span>
+            <span><b>$500,000</b></span>
+        </div>
+        <div class="p-houses">
+            <img src="/images/automobiles/istockphoto-1299087866-170667a.jpg" />
+            <span>Bentley</span>
+            <span><b>$400,000</b></span>
+        </div>
+        <div class="p-houses">
+            <img src="/images/automobiles/felipe-simo-HBop_t9V9kM-unsplash.jpg" />
+            <span>Porsh</span>
+            <span><b>$23,300,000</b></span>
+        </div>
+        <div class="p-houses">
+            <img src="/images/automobiles/ildar-garifullin-uX4Bjke_xUE-unsplash.jpg" />
+            <span>Benz 230c</span>
+            <span><b>$200,000</b></span>
+        </div>
+    </section>
+     <!--computers-->
+     <section class="categories">
+        <h2>Popular in Laptops and computers</h2>
+        <a href="#">
+            <div class="p-houses">
+                <img src="/images/gadgets/istockphoto-1292038829-170667a.jpg" />
+                <span>4WD Cardilac</span>
+                <span><b>$500,000</b></span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="p-houses">
+                <img src="/images/gadgets/istockphoto-1297540300-170667a.jpg" />
+                <span>4WD Cardilac</span>
+                <span><b>$500,000</b></span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="p-houses">
+                <img src="/images/gadgets/photo-1611186871348-b1ce696e52c9.jpeg" />
+                <span>4WD Cardilac</span>
+                <span><b>$500,000</b></span>
+            </div>
+        </a>
+        <a href="#">
+            <div class="p-houses">
+                <img src="/images/gadgets/photo-1593642632823-8f785ba67e45.jpeg" />
+                <span>4WD Cardilac</span>
+                <span><b>$500,000</b></span>
+            </div>
+        </a>
+        
+    </section>
+    <!--footer-->
+    <footer class="footer">
+        <h4>All right reserved.</h4>
+        <p>This is the most Beautiful site that ive ever built,
+             you can like it and check-out...</p>
+        <h3>Designed by Oyegbile Marvellous.</h3>
+    </footer>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+           $('.nav-bar').on('click',function(){
+               $("nav ul").slideToggle();
+           })
+        })
+
+    </script>
+</body>
+</html>

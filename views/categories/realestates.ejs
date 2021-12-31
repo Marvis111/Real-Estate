@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Real Estate</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/cat.css">
+	<link rel="stylesheet" href="../fonts/icomoon/style.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <!--nav sections.-->
+    <%- include('../partials/unauthorisedNav') %>
+    <!--main section..-->
+    <section class="cats-section">
+        <h4>Here is what we have for you in Real Estates</h4>
+        <a href="#">
+            <div class="in-cat">
+                <div class="img">
+                <img src="../images/houses/photo-1628745277874-919d8f8ed03a.jpeg"/>
+                </div>
+                <div class="in-cat-desc">
+                    <h4>3 Bedroom Flat</h4>
+                    <span>
+                        Lorem ipsum is a dummy text used by all developers that 
+                        cannot reason out a paragraph text or something.All content and graphics 
+                        on this website are the property of the my D.
+    
+                    </span>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+        <div class="in-cat">
+            <div class="img">
+            <img src="../images/houses/photo-1513584684374-8bab748fbf90.jpeg"/>
+            </div>
+            <div class="in-cat-desc">
+                <h4>5 Bedroom Flat</h4>
+                <span>
+                    Lorem ipsum is a dummy text used by all developers that 
+                    cannot reason out a paragraph text or something.
+
+                </span>
+            </div>
+        </div>
+        </a>
+        <a href="#">
+            <div class="in-cat">
+                <div class="img">
+                <img src="../images/houses/istockphoto-524085051-170667a.jpg"/>
+                </div>
+                <div class="in-cat-desc">
+                    <h4>5 Bedroom Flat</h4>
+                    <span>
+                        Lorem ipsum is a dummy text used by all developers that 
+                        cannot reason out a paragraph text or something.
+    
+                    </span>
+                </div>
+            </div>
+            </a>
+            <a href="#">
+                <div class="in-cat">
+                    <div class="img">
+                    <img src="../images/houses/photo-1564013799919-ab600027ffc6.jpeg"/>
+                    </div>
+                    <div class="in-cat-desc">
+                        <h4>5 Bedroom Flat</h4>
+                        <span>
+                            Lorem ipsum is a dummy text used by all developers that 
+                            cannot reason out a paragraph text or something.
+        
+                        </span>
+                    </div>
+                </div>
+                </a>
+    </section>
+    <!--follow-->
+    <div class="follow">
+        <span>You can also follow us on our media <i class="icon-arrow-down"></i> </span>
+        <div class="media">
+            <span ><i class="icon-facebook"></i></span>
+            <span ><i class="icon-twitter"></i></span>
+            <span ><i class="icon-instagram"></i></span>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $('.nav-bar').on('click',function(){
+               $("nav ul").slideToggle();
+           })
+        })
+
+    </script>
+</body>
+</html>
