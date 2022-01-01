@@ -5,5 +5,8 @@ module.exports = {
     },
     categories:(req,res)=>{
         res.render('categories')
+    },
+    signUp:(req,res) =>{
+        res.render('signup');
     }
 }

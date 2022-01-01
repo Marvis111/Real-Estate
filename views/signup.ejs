@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Real Estate</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/reg.css">
+	<link rel="stylesheet" href="/fonts/icomoon/style.css">
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+<body>
+    <%- include('./partials/unauthorisedNav') %>
+    <!--reg section...-->
+    <section class="reg-section">
+        <div class="section-row">
+                <img src="/images/msls/Online Review-pana.png" />
+                <h4>Sign Up to Make Purchase</h4>
+        </div>
+        <div class="section-row">
+            <div class="check-mate">
+                <span>Already have an account?</span>
+                <div class="reg">
+                    <a href="/login">Login</a>
+                </div>
+            </div>
+            <h3>Welcome! You're ready to make a Purchase</h3>
+            <div class="reg-form">
+                <form>
+                    <div class="form-error">
+                        <strong>Invalid Email Address</strong>
+                        <strong>Password is required.</strong>
+                    </div>
+                    <div class="form-input">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Enter First name" name="fname"/>
+                    </div>
+                    <div class="form-input">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Enter First name" name="lname"/>
+                    </div>
+                    <div class="form-input">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter Email Address" name="email"/>
+                    </div>
+                    <div class="form-input">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter Password" name="password"/>
+                    </div>
+                    <div class="form-input">
+                        <label>Comfirm Password</label>
+                        <input type="password" placeholder="Comfirm password" name="comf_password"/>
+                    </div>
+                    <div class="form-input">
+                        <button type="submit" >Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+           $('.nav-bar').on('click',function(){
+               $("nav ul").slideToggle();
+           })
+        })
+
+    </script>
+</body>
+</html>

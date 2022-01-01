@@ -1,0 +1,27 @@
+     <div class="new-user">
+                
+            </div>
+            <div class="welcome-img">
+                <img src="/images/msls/Online Review-pana.png" />
+            </div>
+            .new-user{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.new-user h4{
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.welcome-img{
+    width: auto;
+    background: white;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.welcome-img img,
