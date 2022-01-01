@@ -121,5 +121,8 @@ border-radius: 5px;
     .form-input input{
         width: 100%;
     }
+    .form-error{
+        width: 90%;
+    }
 
 }
