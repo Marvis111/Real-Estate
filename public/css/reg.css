@@ -87,7 +87,6 @@ border-radius: 5px;
     padding: 10px;
     border-radius: 5px;
     background: rgb(252, 230, 230);
-    
 }
 .form-error strong{
     font-weight: 500;
@@ -110,9 +109,13 @@ border-radius: 5px;
     .section-row{
         width: 90%;
     }
+    
 }
 @media all and (max-width:572px){
     .section-row{
+        width: 100%;
+    }
+    .form-input input{
         width: 100%;
     }
 }
