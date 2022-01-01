@@ -109,6 +109,9 @@ border-radius: 5px;
     .section-row{
         width: 90%;
     }
+    .form-input button{
+        width: 100%;
+    }
     
 }
 @media all and (max-width:572px){
@@ -118,4 +121,5 @@ border-radius: 5px;
     .form-input input{
         width: 100%;
     }
+
 }

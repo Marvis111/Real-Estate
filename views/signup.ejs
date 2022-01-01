@@ -28,11 +28,18 @@
             </div>
             <h3>Welcome! You're ready to make a Purchase</h3>
             <div class="reg-form">
-                <form>
-                    <div class="form-error">
+                <form method="post" action="/signup">
+                    <% if(flashMessages.errors){ %>
+                        <div class="form-error">
+                            <% flashMessages.errors.forEach((error)=>{ %>
+                                <strong><%= error.msg %>!</strong>
+                              <% }) %>
+                        </div>
+                    <% } %>
+                   <!--- 
                         <strong>Invalid Email Address</strong>
                         <strong>Password is required.</strong>
-                    </div>
+                    -->
                     <div class="form-input">
                         <label>First Name</label>
                         <input type="text" placeholder="Enter First name" name="fname"/>

@@ -8,5 +8,5 @@ module.exports = {
     },
     signUp:(req,res) =>{
         res.render('signup');
-    }
+    },
 }
