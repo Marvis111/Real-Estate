@@ -25,3 +25,9 @@
     margin-top: 10px;
 }
 .welcome-img img,
+module.exports = ()=>{
+        console.log(process.env.NODE_ENV)
+        if (process.env.NODE_ENV ) {
+                
+        }
+}
