@@ -1,16 +1,15 @@
 const cookieParser = require('cookie-parser');
-
 const express =  require('express'),
 ejs = require('ejs'),
 connectFlash = require('connect-flash'),
 expressSession = require('express-session'),
 //layouts = require('express-ejs-layouts'),
 app = express();
-
 //set 
+app.set('views','views');
 app.set('view engine','ejs')
 app.set('port',process.env.PORT || 9000);
-app.set('views','views');
+
 //use middlewares
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
@@ -19,43 +18,32 @@ app.use(cookieParser('my-secret-here'));
 app.use(expressSession({
         secret:"my-secret-here",
         cookie:{
-                maxAge:new Date(Date.now() + 1000 * 60 * 60) ,
+                maxAge: 1000 * 60 * 2,
         },
         resave:false,saveUninitialized:false
-}))
-//mongodb
-//use flash messages..
+}) )
+// connect
 app.use(connectFlash());
+app.use((req,res,next)=>{
+        if(req.session){
 
+        }
+})
 app.use((req,res,next)=>{
         res.locals.flashMessages = req.flash();
-        if (req.session.cookie.maxAge > Date.now() ) {
-                req.session.userId = req.cookies.userId;
-                req.session.fname = req.cookies.fname;
-                req.session.lname = req.cookies.lname;
-                req.session.email = req.cookies.email;
-                next();
+        if (req.session.user != undefined) {
+                res.locals.user = req.session.user
+        }else{
+                res.locals.user = null;
         }
         next();
-        
-})
-
-app.use((req,res,next)=>{
-        if (req.session !== null) {
-                const {lname,fname,userId,email} = req.session
-                res.locals.user = {lname,fname,userId,email}
-                 next()
-        }else{
-                res.locals.user = null
-                next()
-        }
 });
-//
-
-//app.use(layouts)
+//2022-01-17T11:05:56.518Z
 //ROUTES....
+
 require('./Routers/index')(app);
 
+
 app.listen(app.get('port'),()=>{
-        console.log('server running on port '+app.get('port'));
+        console.log('server running on port '+ app.get('port'));
 })

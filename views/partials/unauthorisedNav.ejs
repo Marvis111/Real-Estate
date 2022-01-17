@@ -10,8 +10,13 @@
     <ul class="nav-lists">
         <a href="/categories"> <li class="list-items">Browse Categories</li></a>
         <a href="/categories"></a><li class="list-items">Services</li></a>
-        <li class="list-items"><a href="/login">Login</a></li>
-        <li class="list-items"><a href="/signup">Signup</a></li>
+        <% if(user == null){ %>
+            <li class="list-items"><a href="/login">Login</a></li>
+            <li class="list-items"><a href="/signup">Signup</a></li>
+        <% }else{ %>
+            <li class="list-items"><%= user.fname %></li>
+        <% } %>
+        
     </ul>
     <div class="nav-bar">
         <i class="icon-bars"></i>

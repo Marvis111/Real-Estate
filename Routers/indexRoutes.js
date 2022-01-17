@@ -1,11 +1,11 @@
 const indexRoutes = require('express').Router(),
 indexController = require('../controllers/indexController'),
-{validateInputs,checkInput,saveValidUser, redirectView} = require("../controllers/regController");
+{validateInputs,checkInputs,ValidatedUser, redirectView} = require("../controllers/regController");
 
 indexRoutes.get('/',indexController.home);
 indexRoutes.get('/categories',indexController.categories);
-indexRoutes.get('/signup',indexController.signUp)
-.post('/signup',checkInput,validateInputs,saveValidUser,redirectView);
+indexRoutes.get('/signup',indexController.signUp);
+indexRoutes.post('/signup',checkInputs,validateInputs,ValidatedUser,redirectView);
 
 
 module.exports = indexRoutes;
