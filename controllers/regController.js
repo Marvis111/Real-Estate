@@ -54,24 +54,20 @@ module.exports = {
                   next();
              }
         }
-        
     },
     ValidatedUser:async (req,res,next) =>{
        if (req.skip) {
            next();
        } else {
            try {
-               res.cookie('fname',req.session.user.fname,{maxAge:1000 * 60 *2,signed:true})
-               res.cookie('lname',req.session.user.lname,{maxAge:1000 * 60 *2,signed:true})
-               res.cookie('userId',req.session.user.userId,{maxAge:1000 * 60 *2,signed:true})
-               res.cookie('email',req.session.user.email,{maxAge:1000 * 60 *2,signed:true})
+            const {lname,fname,email,userId} = req.session.user
+            let user;
+               user = {lname,fname,email,userId}
+               res.cookie('user',user,{maxAge:1000 * 60 * 20,signed:true})
                //userdetails
-            
                res.locals.user = req.session.user
                res.data = {success:true};
-               console.log(req)
               next();
-
            } catch (error) {
             res.data = [{msg:"Error in creating Cookies",param:'password'}];
                  next(error)

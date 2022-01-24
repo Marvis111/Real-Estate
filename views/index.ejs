@@ -7,24 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Real Estate</title>
     <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/popper.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/fonts/icomoon/style.css">
-	<script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    
+	
 </head>
 <body>
     <%- include('./partials/unauthorisedNav') %>
     <!--hero sectio...-->
+    <% if(flashMessages.success){ %>
+        <div class="form-error" style="position: absolute;">
+                <strong><%= flashMessages.success %>!</strong>
+        </div>
+    <% } %>
     <section class="hero-section">
         <div class="jumbotron-intro">
             <h1>You need a house?</h1>
-            <div>
-                <% if(flashMessages.success){ %>
-                    <div class="form-error">
-                            <strong><%= flashMessages.success.message %>!</strong>
-                    </div>
-                <% } %>
-                
-
-            </div>
             
             <p>We have all it takes for you to have a good night rest under a conducive building
             . All you need to do is to explore our pages.</p>

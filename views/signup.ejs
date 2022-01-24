@@ -77,13 +77,12 @@
 </style>
 <script type="text/javascript">
         $(document).ready(function(){
-           $('.nav-bar').on('click',function(){
+           $(document).on('click','.nav-bar',function(){
                $("nav ul").slideToggle();
            })
         })
     const signupForm = document.getElementById('signupForm');
     const signupFormInputs = document.querySelectorAll('#signupForm input')
-
     signupForm.onsubmit  = async (e) =>{
         e.preventDefault();
         var formData = {};
@@ -107,16 +106,16 @@
                 dispatchFieldsError(data);
             }
         } catch (error) {
-            
+            throw error
         }
     }
 
     function dispatchFieldsError(errors){
         signupFormInputs.forEach(input =>{
-            input.nextSibling.nodeValue = "";
+            input.nextElementSibling.innerHTML = "";
             errors.forEach(err=>{
                 if(err.param === input.name){
-                    input.nextSibling.nodeValue = err.msg
+                    input.nextElementSibling.innerHTML = err.msg
                 }
             })
         })

@@ -3,18 +3,28 @@
         <div>
            <a href="/">
             <img src="images/icon-1.svg" />
-        </div>
+
         <span style="margin-left: 10px;">RSTATES</span>
            </a>
+        </div>
     </div>
     <ul class="nav-lists">
         <a href="/categories"> <li class="list-items">Browse Categories</li></a>
-        <a href="/categories"></a><li class="list-items">Services</li></a>
-        <% if(user == null){ %>
-            <li class="list-items"><a href="/login">Login</a></li>
-            <li class="list-items"><a href="/signup">Signup</a></li>
+        <a href="/categories"><li class="list-items">Services</li></a>
+        <% if(user == undefined){ %>
+            <a href="/login"><li class="list-items">Login</li></a>
+            <a href="/signup"><li class="list-items">SignUp</li></a>
         <% }else{ %>
-            <li class="list-items"><%= user.fname %></li>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <%= user.fname %>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </div>
         <% } %>
         
     </ul>

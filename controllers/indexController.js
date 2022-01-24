@@ -1,9 +1,9 @@
 
 module.exports = {
     home:(req,res)=>{
-        if(req.session.user){
+        if(req.session.user != undefined || req.session.user != null){
             req.flash('success',
-            {message:`Welcome ${req.session.user.fname}, you are ready to make Purchase`});
+            `Welcome ${req.session.user.fname}, you are ready to make Purchase`);
         }
          res.status(200).render('index');
     },
